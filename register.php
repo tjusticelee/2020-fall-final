@@ -1,3 +1,5 @@
+<?php
+echo <<< "EOT"
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -43,3 +45,7 @@
     </form>
   </body>
 </html>
+EOT;
+
+session_start();
+?>
