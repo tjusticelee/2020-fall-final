@@ -1,4 +1,5 @@
 <?php
+
 echo <<< "EOT"
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -49,5 +50,4 @@ echo <<< "EOT"
 </html>
 EOT;
 
-session_start();
 ?>
