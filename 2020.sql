@@ -26,53 +26,71 @@ CREATE TABLE Users (
     Phone varchar(255),
     Password varchar(255),
     DOB varchar(255),
-    Role_id int FOREIGN KEY REFERENCES Role(Role_id)
+    FOREIGN KEY (Role_id)
+      REFERENCES Role(Role_id)
+      ON DELETE CASCADE
 );
 
 CREATE TABLE Role (
-    Role_id int NOT NULL PRIMARY KEY,
+    Role_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name varchar(255) NOT NULL,
-    access_lvl varchar(255) NOT NULL,
-    User_id int FOREIGN KEY REFERENCES Users(Users_id)
+    access_lvl int NOT NULL,
+    FOREIGN KEY (User_id)
+      REFERENCES Users(User_id)
+      ON DELETE CASCADE
 );
 
 CREATE TABLE Employess (
     employee_id int NOT NULL PRIMARY KEY,
     salary int,
     group_id int NOT NULL,
-    User_id int FOREIGN KEY REFERENCES Users(Users_id)
+    FOREIGN KEY (User_id)
+      REFERENCES Users(User_id)
+      ON DELETE CASCADE
+
 
 );
 
 CREATE TABLE Patient (
     Patient_id int NOT NULL PRIMARY KEY,
-    family_code varchar(255) NOT NULL,
+    family_code int NOT NULL,
     emergency_contact varchar(255) NOT NULL,
     relation_to_ec varchar(255) NOT NULL,
     group_id varchar(255) NOT NULL,
-    User_id int FOREIGN KEY REFERENCES Users(Users_id)
+    FOREIGN KEY (User_id)
+      REFERENCES Users(User_id)
+      ON DELETE CASCADE
 );
 
 CREATE TABLE Checklist (
-    List_id int NOT NULL PRIMARY KEY,
-    Dates date,
-    am_med varchar(255) NOT NULL,
-    pm_med varchar(255) NOT NULL,
-    eve_med varchar(255) NOT NULL,
-    night_med varchar(255) NOT NULL,
-    breakfast varchar(255) NOT NULL,
-    lunch varchar(255) NOT NULL,
-    dinner varchar(255) NOT NULL,
-    Patient_id int FOREIGN KEY REFERENCES Patient(Patient_id),
-    employee_id int FOREIGN KEY REFERENCES Employess(employee_id)
+    List_id int AUTO_INCREMENT PRIMARY KEY,
+    Dates date NOT NULL,
+    am_med BOOLEAN NOT NULL,
+    pm_med BOOLEAN NOT NULL,
+    eve_med BOOLEAN NOT NULL,
+    night_med BOOLEAN NOT NULL,
+    breakfast BOOLEAN NOT NULL,
+    lunch BOOLEAN NOT NULL,
+    dinner BOOLEAN NOT NULL,
+    FOREIGN KEY (Patient_id)
+      REFERENCES Patient(Patient_id)
+      ON DELETE CASCADE,
+    FOREIGN KEY (employee_id)
+      REFERENCES Employess(employee_id)
+      ON DELETE CASCADE
 );
 
 CREATE TABLE Appointments (
-    Dates date,
+    appt_id INT AUTO_INCREMENT PRIMARY KEY,
+    Dates date NOT NULL,
     comment varchar(255) NOT NULL,
     am_med varchar(255) NOT NULL,
     pm_med varchar(255) NOT NULL,
     night_med varchar(255) NOT NULL,
-    Patient_id int FOREIGN KEY REFERENCES Patient(Patient_id),
-    employee_id int FOREIGN KEY REFERENCES Employess(employee_id)
+    FOREIGN KEY (Patient_id)
+      REFERENCES Patient(Patient_id)
+      ON DELETE CASCADE,
+    FOREIGN KEY (employee_id)
+      REFERENCES Employess(employee_id)
+      ON DELETE CASCADE
 );
