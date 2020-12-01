@@ -1,12 +1,12 @@
 <?php
 
-require_once "config.php"
+require_once "config.php";
+require_once "auth.php";
 //connects to database
 session_start();
 $_SESSION = array();
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-
   $email = $_POST['email'];
   //takes email value from input name email in login.php
 
@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //checks for empty variables by taking the name value in login form and checking
     //to see if it's empty.
         $_SESSION["error"] = "<p> Please enter: <p>". $name;
-        header("Location:../login.php")
+        header("Location:../login.php");
         //error message if fields are left empty.
       }
     }
@@ -37,68 +37,68 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt->bind_result($user_id, $password, $firstName, $lastName, $role_id);
         $stmt->fetch();
 
-        if(password_verify($_POST['password1'], $password)) {
+        if($_POST['password1'] == $password) {
           session_regenerate_id();
           $_SESSION['loggedin'] = TRUE;
           $_SESSION['user_id'] = $user_id;
           $_SESSION['firstName'] = $firstName;
           $_SESSION['lastName'] = $lastName;
-        }
-
-        else{
+          echo $role_id;
+        }else{
           $_SESSION["error"] = "email or password incorrect";
           header("Location:../login.php");
           exit;
-        }
 
-        else{
-          $_SESSION["error"] = "email or password incorrect";
-          header("Location:../login.php");
-          exit;
-        }
+          }
+        //else{
+          //$_SESSION["error"] = "email or password incorrect";
+          //header("Location:../login.php");
+          //exit;
+        //}
 
         $stmt->close();
 
       }
+      }
 
-      if(isset($_SESSSION['loggedin'])){
-        role_direct($role_id);
+      if(isset($_SESSION['loggedin'])){
+        role_redirect($role_id);
       }
 
   }
 
-  function role_redirect($role_id){
-    if($role_id == 1){
-      //header('Location:');
-      //exit;
-    }
+}
 
-    if($role_id == 2){
-      //header('Location:');
-      //exit;
-    }
-
-    if($role_id == 3){
-      //header('Location:');
-      //exit;
-    }
-
-    if($role_id == 4){
-      //header('Location:');
-      //exit;
-    }
-
-    if($role_id == 5){
-      //header('Location:');
-      //exit;
-    }
-
-    if($role_id == 6){
-      //header('Location:');
-      //exit;
-    }
+function role_redirect($role_id){
+  if($role_id == 1){
+    header('Location:../../admin-pages/homepage.html');
+    exit;
   }
 
+  if($role_id == 2){
+    //header('Location:');
+    //exit;
+  }
+
+  if($role_id == 3){
+    //header('Location:');
+    //exit;
+  }
+
+  if($role_id == 4){
+    //header('Location:');
+    //exit;
+  }
+
+  if($role_id == 5){
+    //header('Location:');
+    //exit;
+  }
+
+  if($role_id == 6){
+    //header('Location:');
+    //exit;
+  }
 }
 
 ?>
