@@ -1,4 +1,5 @@
 <?php
+
 echo <<< "EOT"
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -42,10 +43,11 @@ echo <<< "EOT"
         <br>
       <label for="vpassword">Verify password:</label>
       <input type="text" name="password1" value="">
+        <br>
+      <input id="submit" type="submit" value="Submit">
     </form>
   </body>
 </html>
 EOT;
 
-session_start();
 ?>
