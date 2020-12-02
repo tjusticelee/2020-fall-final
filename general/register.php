@@ -12,15 +12,15 @@ echo <<< "EOT"
 
     <h1>Register</h1>
       <br>
-    <form class="" action="index.html" method="post">
+    <form class="register" action="index.html" method="post">
       <label for="role">Role</label>
       <select name="oper" id="oper">
-        <option value="admin">Admin</option>
-        <option value="doctor">Doctor</option>
-        <option value="supervisor">Supervisor</option>
-        <option value="caregiver">Care giver</option>
-        <option value="patient">Patient</option>
-        <option value="familymem">Family member</option>
+        <option value="1">Admin</option>
+        <option value="2">Doctor</option>
+        <option value="3">Supervisor</option>
+        <option value="4">Care giver</option>
+        <option value="5">Patient</option>
+        <option value="6">Family member</option>
       </select>
         <br>
       <label for="first_name">First Name:</label>
