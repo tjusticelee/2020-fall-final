@@ -15,7 +15,7 @@ echo <<< "EOT"
 
       <br>
 
-    <form class="form-style register" action="index.html" method="post">
+    <form class="form-style register" action="bulkwork/register-work.php" method="post">
 
       <label for="role">Role</label>
       <select onchange="moreinfo(role)" name="role">
@@ -59,16 +59,17 @@ echo <<< "EOT"
 
         <br>
 
-      <label for="vpassword">Verify password:</label>
-      <input type="text" name="password1" value="">
-
-        <br>
-
       <input id="submit" type="submit" value="Submit">
 
     </form>
   </body>
 </html>
 EOT;
+
+session_start();
+if(isset($_SESSION['error'])){
+  echo $_SESSION['error'];
+  unset( $_SESSION['error'] );
+}
 
 ?>

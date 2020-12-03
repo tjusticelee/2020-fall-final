@@ -16,8 +16,8 @@ function moreinfo(role) {
       form.insertBefore(patientInputLabel, submit);
       form.insertBefore(patientInput, submit);
     }
-    inputgenerate('familycode', "Family Code");
-    inputgenerate('emer_contact', "Emergency Contact");
-    inputgenerate('relation', 'Relation');
+    inputgenerate('familycode', "Family Code: ");
+    inputgenerate('emer_contact', "Emergency Contact: ");
+    inputgenerate('relation', 'Relation: ');
   }
 }
