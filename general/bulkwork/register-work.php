@@ -22,8 +22,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }
 }
 
-$stmt = mysqli_prepare($link, "INSERT INTO users(role_id, firstName, lastName, email,
-                              phone, DOB, password) VALUES(?,?,?,?,?,?,?)");
+$stmt = mysqli_prepare($link, "INSERT INTO users(`role_id`, `firstName`, `lastName`, `email`,
+                              `phone`, `DOB`, `password`, `confirmed`) VALUES(?,?,?,?,?,?,?, NULL)");
 mysqli_stmt_bind_param($stmt, 'issssss', $role, $fname, $lname, $email, $phone, $dob, $pw);
 mysqli_stmt_execute($stmt);
 //sql statement and execution to store "post" data into DATABASE
