@@ -6,16 +6,16 @@ VALUES ('admin', 1),
       ('patient', 5),
       ('family', 6);
 
-INSERT INTO users (firstName, lastName, email, phone, password, DOB, role_id)
-VALUES ('Big', 'Cheese', 'bigcheese@admin.com', 8675309, 'qwerty', 1999-01-01, 1),
-      ('Shady', 'Supervisor', 'shady@super.com', 1234567, 'asdfg', 1776-07-07, 2),
-      ('Dr', 'Doc', 'doc@tor.com', 2345678, 'ytrewq', 1777-08-08, 3),
-      ('Care', 'giver', 'care@giver.com', 3456789, 'gfdsa', 1778-09-09, 4),
-      ('mother', 'thresa', 'mother@gmail.com', 5679090, 'mother', 1000-10-2, 4),
-      ('Chuck', 'Norris', 'norris@chuck.com', 9990505, 'norris', 1774-03-01, 5),
-      ('Sandy', 'Cheeks', 'sandy@cheeks.com', 3495588, 'bikini', 1676-12-12, 5),
-      ('Bruce', 'Lee', 'brucelee@lee.com', 8008135, 'dragon', 1300-01-17, 6),
-      ('sponge', 'bob', 'sponge@bob.com', 1134000, 'bottom', 1210-05-05, 6);
+INSERT INTO users (firstName, lastName, email, phone, password, DOB, role_id, confirm)
+VALUES ('Big', 'Cheese', 'bigcheese@admin.com', 8675309, 'qwerty', 1999-01-01, 1, 1),
+      ('Shady', 'Supervisor', 'shady@super.com', 1234567, 'asdfg', 1776-07-07, 2, 1),
+      ('Dr', 'Doc', 'doc@tor.com', 2345678, 'ytrewq', 1777-08-08, 3, 1),
+      ('Care', 'giver', 'care@giver.com', 3456789, 'gfdsa', 1778-09-09, 4, 1),
+      ('mother', 'thresa', 'mother@gmail.com', 5679090, 'mother', 1000-10-2, 4, 1),
+      ('Chuck', 'Norris', 'norris@chuck.com', 9990505, 'norris', 1774-03-01, 5, 1),
+      ('Sandy', 'Cheeks', 'sandy@cheeks.com', 3495588, 'bikini', 1676-12-12, 5, 1),
+      ('Bruce', 'Lee', 'brucelee@lee.com', 8008135, 'dragon', 1300-01-17, 6, 1),
+      ('sponge', 'bob', 'sponge@bob.com', 1134000, 'bottom', 1210-05-05, 6, 1);
 
 INSERT INTO patient (patient_id, family_code, emergency_contact, relation_to_ec, group_id)
 VALUES (5, 6969, 'Norris family', 'Father', 1),

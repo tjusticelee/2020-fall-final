@@ -31,6 +31,7 @@ CREATE TABLE users (
     password varchar(255),
     DOB date,
     role_id int,
+    confirm BOOLEAN,
     FOREIGN KEY (role_id)
       REFERENCES role(role_id)
       ON DELETE CASCADE
