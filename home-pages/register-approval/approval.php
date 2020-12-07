@@ -4,7 +4,7 @@ require_once "../../general/bulkwork/auth.php";
 
 session_start();
 
-if (!isset($_SESSION['role_id'])) {
+if (!isset($_SESSION['user_id'])) {
   header("Location: ../../login.php");
 }
 
