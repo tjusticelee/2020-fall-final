@@ -1,6 +1,6 @@
 <?php
-require_once(../bulkwork/config.php);
-require_once(../bulkwork/auth.php);
+require_once "../../general/bulkwork/config.php";
+require_once "../../general/bulkwork/auth.php";
 
 session_start();
 

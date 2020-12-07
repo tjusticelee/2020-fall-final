@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 function role_redirect($role_id){
   if($role_id == 1){
-    header('Location:../../admin-pages/homepage.html');
+    header('Location:../../home-pages/admin-pages/homepage.php');
     exit;
   }
 

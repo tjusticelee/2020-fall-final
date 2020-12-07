@@ -41,9 +41,6 @@ echo <<< "EOT"
       <label for="password">Password:</label>
       <input type="text" name="password" value="">
         <br>
-      <label for="vpassword">Verify password:</label>
-      <input type="text" name="password1" value="">
-        <br>
       <input id="submit" type="submit" value="Submit">
     </form>
   </body>
