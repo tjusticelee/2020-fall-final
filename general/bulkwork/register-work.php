@@ -62,7 +62,7 @@ msqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 }elseif (inarray($role, $employees)){
   $stmt = mysqli_prepare($link, "INSERT INTO employees (`employee_id`, `salary`, `group_id`) VALUES(?, null, 1)");
-  mysqli)stmt_bind_param($stmt, 'i', $user_id);
+  mysqli_stmt_bind_param($stmt, 'i', $user_id);
   mysqli_stmt_execute($stmt);
   mysqli_stmt_close($stmt);
   //elseif satement inserts data into employees table with user id
