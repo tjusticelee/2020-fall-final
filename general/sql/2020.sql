@@ -30,6 +30,7 @@ CREATE TABLE users (
     phone varchar(255),
     password varchar(255),
     DOB date,
+    confirmed BOOLEAN,
     role_id int,
     confirm BOOLEAN,
     FOREIGN KEY (role_id)

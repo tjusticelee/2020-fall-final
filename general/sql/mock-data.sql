@@ -6,10 +6,10 @@ VALUES ('admin', 1),
       ('patient', 5),
       ('family', 6);
 
-INSERT INTO users (firstName, lastName, email, phone, password, DOB, role_id, confirm)
+INSERT INTO users (firstName, lastName, email, phone, password, DOB, role_id, confirmed)
 VALUES ('Big', 'Cheese', 'bigcheese@admin.com', 8675309, 'qwerty', 1999-01-01, 1, 1),
       ('Shady', 'Supervisor', 'shady@super.com', 1234567, 'asdfg', 1776-07-07, 2, 1),
-      ('Dr', 'Doc', 'doc@tor.com', 2345678, 'ytrewq', 1777-08-08, 3, 1),
+      ('Ken', 'Jeong', 'kenjeong@gmail.com', 2345678, 'ytrewq', 1777-08-08, 3, 1),
       ('Care', 'giver', 'care@giver.com', 3456789, 'gfdsa', 1778-09-09, 4, 1),
       ('mother', 'thresa', 'mother@gmail.com', 5679090, 'mother', 1000-10-2, 4, 1),
       ('Chuck', 'Norris', 'norris@chuck.com', 9990505, 'norris', 1774-03-01, 5, 1),
