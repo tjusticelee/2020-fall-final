@@ -26,7 +26,7 @@ if (auth([1], $link)) {
     <main class ='admin-links'>
         <nav>
           <a href="../register-approval/approval.php">Approve registration</a>
-          <a href="#"></a>
+          <a href="role-add.php">Add role</a>
           <a href="#"></a>
           <a href="#"></a>
           <a href="#"></a>
