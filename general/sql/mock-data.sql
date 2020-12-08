@@ -15,7 +15,7 @@ VALUES ('Big', 'Cheese', 'bigcheese@admin.com', 8675309, 'qwerty', 1999-01-01, 1
       ('Chuck', 'Norris', 'norris@chuck.com', 9990505, 'norris', 1774-03-01, 5, 1),
       ('Sandy', 'Cheeks', 'sandy@cheeks.com', 3495588, 'bikini', 1676-12-12, 5, 1),
       ('Bruce', 'Lee', 'brucelee@lee.com', 8008135, 'dragon', 1300-01-17, 6, 1),
-      ('sponge', 'bob', 'sponge@bob.com', 1134000, 'bottom', 1210-05-05, 6, 1);
+      ('sponge', 'bob', 'sponge@bob.com', 1134000, 'bottom', 1210-05-05, 6, 0);
 
 INSERT INTO patient (patient_id, family_code, emergency_contact, relation_to_ec, group_id)
 VALUES (5, 6969, 'Norris family', 'Father', 1),
