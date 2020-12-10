@@ -72,7 +72,7 @@ if (auth([1, 2], $link)) {
 
   select('Supervisor', 'super', $superv);
   select('Doctor', 'doctor', $doctors);
-  select('Caregiver', 'caregiver-1', $caregivers);
+  select('Caregiver', 'caregiver1', $caregivers);
 
   echo <<<"EOT"
         <input type='submit' value='Submit'>

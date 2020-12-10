@@ -3,6 +3,8 @@
 CREATE DATABASE  IF NOT EXISTS 2020project;
 USE 2020project;
 
+DROP TABLE IF EXISTS roster;
+
 DROP TABLE IF EXISTS appointments;
 
 DROP TABLE IF EXISTS checklist;
@@ -96,4 +98,23 @@ CREATE TABLE appointments (
     FOREIGN KEY (employee_id)
       REFERENCES employees(employee_id)
       ON DELETE CASCADE
+);
+
+CREATE TABLE roster (
+  roster_date DATE PRIMARY KEY,
+  super_id BIGINT NOT NULL,
+  doc_id BIGINT NOT NULL,
+  cgone BIGINT NOT NULL,
+
+  FOREIGN KEY (super_id)
+    REFERENCES users (user_id)
+    ON DELETE CASCADE,
+
+  FOREIGN KEY (doc_id)
+    REFERENCES users (user_id)
+    ON DELETE CASCADE,
+
+  FOREIGN KEY (cgone)
+    REFERENCES users (user_id)
+    ON DELETE CASCADE
 );
